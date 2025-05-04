@@ -28,6 +28,7 @@
     background: radial-gradient(circle, rgba(0,255,180,0.1) 0%, transparent 80%);
     animation: rotateBg 30s linear infinite;
     z-index: 0;
+    pointer-events: none;
   }
 
   .layout-container h2 {
