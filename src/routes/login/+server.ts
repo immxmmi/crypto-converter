@@ -9,18 +9,11 @@ export async function POST({ request, cookies }) {
       path: '/',
       httpOnly: true,
       sameSite: 'strict',
-      secure: true, // HTTPS-kompatibel für Deployment z. B. auf Vercel
-      maxAge: 60 * 60 // 1 Stunde
+      secure: true, 
+      maxAge: 60 * 60 
     });
     return json({ success: true });
   }
 
   return new Response('Unauthorized', { status: 401 });
 }
-
-// src/routes/+page.server.ts
-export function load({ locals }) {
-    return {
-      loggedIn: locals.loggedIn
-    };
-  }

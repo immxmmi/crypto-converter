@@ -1,4 +1,3 @@
-// src/routes/logout/+server.ts
 import { redirect } from '@sveltejs/kit';
 
 export async function GET({ cookies }) {
@@ -6,7 +5,7 @@ export async function GET({ cookies }) {
     path: '/',
     httpOnly: true,
     sameSite: 'strict',
-    secure: true // lokal false, auf Vercel true!
+    secure: true 
   });
 
   throw redirect(303, '/');
